@@ -22,7 +22,8 @@ function stateful_output() {
         target_file=$tmp_file
     else
         echo "$TAG_NAME=$tag_value  $METRIC_NAME  0   \n" >> $tmp_file
-        echo "$TAG_NAME=$tag_value  $METRIC_NAME  $ret_value \n" > $target_file
+        echo "$TAG_NAME=$tag_value  $METRIC_NAME  $ret_value \n" >  $target_file
+#       echo "$TAG_NAME=""          $METRIC_NAME  0.9        \n" >> $target_file
     fi
 
     s='{"endpoint":"%s","timestamp":%s,"tags":"%s","metric":"%s","value":%s,"counterType":"GAUGE","step":60}\n'
